@@ -14,7 +14,11 @@ class BankAccount
   end
 
   def withdraw(amount)
-
+    if @balance - amount <= 0.0
+      "Can't overdraft account"
+    else
+    @balance -= amount
+    end
   end
 
   def verify?(id, pin)
