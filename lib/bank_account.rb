@@ -22,6 +22,10 @@ class BankAccount
   end
 
   def verify?(id, pin)
-
+    if [id, pin] == [@account_number, @secret_code]
+      true
+    else
+      false
+    end
   end
 end
